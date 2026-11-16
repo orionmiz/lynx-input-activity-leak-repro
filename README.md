@@ -1,104 +1,69 @@
-# Lynx Explorer: unfocused input retains destroyed Activity
+# Android Activity leak from an unfocused input
 
-Reproduction for [lynx-family/lynx#11010](https://github.com/lynx-family/lynx/issues/11010).
+A minimal reproduction of [lynx-family/lynx#11010](https://github.com/lynx-family/lynx/issues/11010).
+Opening a page with an `<input>` and closing it without focusing the input leaves
+its destroyed Activity retained by the SDK's static keyboard-dispatcher map.
 
-Minimal ReactLynx page for the Android keyboard dispatcher lifetime bug.
-No timers, subscriptions, requests, application state, or custom native modules.
-The control page contains the same container and a text node, with no input.
+## Run the reproduction
 
-## Environment verified
+You need Node.js/npm, Python 3, adb, and an Android device or emulator. Install the
+unmodified [Lynx Explorer 4.1.0 release APK](https://github.com/lynx-family/lynx/releases/download/4.1.0/LynxExplorer-noasan-release.apk).
+The bug was verified on Android 15 ARM64; the affected SDK path runs on Android 11+.
+Root is needed only for heap collection.
 
-- Official Lynx 4.1.0 `LynxExplorer-noasan-release.apk`, unmodified and not repackaged.
-- APK SHA-256: `6ae29787a2166974c29c2f23d87f3b20a137abcf9a8c17903ad19f3fb7f00cb6`.
-- Android 15 / API 35 ARM64 emulators. Google Play image for the initial comparison;
-  Google APIs userdebug image for heap collection (`AP31.240517.022/11948202`).
-- Node 25.9.0, npm 11.12.1. Dependency versions are locked in package-lock.json.
-- Explorer settings left at fresh-install defaults; no debugger or CDP session attached.
+1. Clone, build, and serve the two test pages:
 
-## Build and serve
+   ```sh
+   git clone https://github.com/orionmiz/lynx-input-activity-leak-repro.git
+   cd lynx-input-activity-leak-repro
+   npm ci
+   npm run build
+   python3 -m http.server 8765 --bind 127.0.0.1
+   ```
 
-Install the official APK from https://github.com/lynx-family/lynx/releases/tag/4.1.0
-on an Android 11+ device/emulator. Actual measurements here used Android 15.
+2. Leave the server running. In another terminal, enter the same repository
+   directory and find your device serial:
 
-```sh
-git clone https://github.com/orionmiz/lynx-input-activity-leak-repro.git
-cd lynx-input-activity-leak-repro
-npm ci
-npm run build
-python3 -m http.server 8765 --bind 127.0.0.1
-```
+   ```sh
+   adb devices
+   ```
 
-Leave the server running. In another terminal:
+3. Run the script, replacing `emulator-5554` with that serial:
 
-```sh
-adb devices
-python3 reproduce.py --serial emulator-5554
-```
+   ```sh
+   python3 reproduce.py --serial emulator-5554
+   ```
 
-Use your actual serial. The script force-stops Explorer once at the beginning,
-opens the input page, waits three seconds, presses Back without focusing the input,
-and waits three seconds. It repeats five times without killing the process.
-Verify that the PID is unchanged. Do not use HOME instead of Back.
+The script opens the input page, waits three seconds, presses Back without
+focusing the input, and waits another three seconds. It repeats five times and
+prints the PID and Activity count after each cycle. Check that the PID stays the
+same: the script resets Explorer only at the start of each scenario. If testing
+manually, close the page with Back rather than HOME.
 
-Expected: closed Activities are released; no dispatcher accumulation.
-Actual: Activity count increases once per cycle, and destroyed Activities remain
-strongly referenced by the SDK's static keyboard-dispatcher map after GC.
+## Check the result
 
-## Controls
+Closing the page should release its keyboard dispatcher and Activity. In the
+reproduction, the Activity count grows from **1 to 5**. Heap inspection confirms
+five destroyed Activities retained through five dispatchers.
+
+Compare the two controls:
 
 ```sh
 python3 reproduce.py --serial emulator-5554 --page control
 python3 reproduce.py --serial emulator-5554 --focus-at 350 440
 ```
 
-The focus coordinates were verified at 1080x2400 / 420dpi. Adjust for your device.
-That control opens the keyboard, verifies `mInputShown=true`, closes the keyboard,
-and then closes the Activity. The script asserts if the keyboard did not open.
+The first removes the input. The second focuses it, opens and closes the keyboard,
+then closes the page. Coordinates `350 440` target the input at 1080×2400 / 420dpi;
+adjust them for your device. If the script reports `Keyboard did not open`, check
+the coordinates and rerun.
 
-## Evidence and measurement caveats
+| Scenario | Dispatcher instances after five cycles |
+| --- | --- |
+| Input never focused | 5 |
+| No input | 0 |
+| Input focused before closing | 0 |
 
-`dumpsys meminfo` is an accumulation indicator, not by itself proof of a leak.
-In the userdebug run, the unfocused case grew from 1 to 5 Activities in one PID.
-The input heap contains five `LynxViewShellActivity`, five `q9.m` (KeyboardEvent),
-and five `q9.m$g` (KeyboardInsetsAnimationDispatcher) objects. A separate HPROF
-confirms all five Activities have `mDestroyed=true`, `mFinished=true`; all five
-KeyboardEvents have `isStartedInUIThread=false` (`q9.m.d`). Five destroy calls
-were also confirmed in logcat.
-
-`input-five-static-paths.txt` records every path from the static map to those
-five Activities, excluding `java.lang.ref.Reference.referent` edges. Obfuscated
-names were mapped using the official APK's DEX and the 4.1.0 source:
-
-- `q9.m.n`: KeyboardEvent.sInsetsAnimationDispatchers
-- `q9.m$g`: KeyboardInsetsAnimationDispatcher
-- `q9.m$g.a`: mHostView
-- `q9.m.d`: isStartedInUIThread
-
-The no-input and focused control traces contain **zero dispatchers** after five
-cycles. Their immediate snapshots still contain one and two Activity objects,
-respectively; these raw counts are not claimed to be zero or to prove independent
-leaks. The focused snapshot includes an Android FrameTracker/MessageQueue path.
-
-The Perfetto `reachable` flag does not mark this app-static path reachable in this
-capture. Counts here include all recorded instances and use explicit static-field
-edges, DEX verification, GC logs, and independent HPROF primitive fields rather
-than filtering on `reachable`.
-
-## Optional heap collection
-
-Requires a userdebug/root-capable emulator (or a host build that permits heap
-profiling). Root is needed only for diagnostics, not to reproduce the accumulation.
-On the verified Google APIs emulator:
-
-```sh
-adb -s emulator-5556 root
-adb -s emulator-5556 push heap.cfg /data/local/tmp/lynx-heap.cfg
-# Run one scenario, then wait for Activity destruction to finish.
-adb -s emulator-5556 shell 'cat /data/local/tmp/lynx-heap.cfg | perfetto --txt -c - -o /data/misc/perfetto-traces/lynx.pftrace'
-adb -s emulator-5556 pull /data/misc/perfetto-traces/lynx.pftrace
-adb -s emulator-5556 shell am dumpheap com.lynx.explorer /data/local/tmp/lynx.hprof
-adb -s emulator-5556 pull /data/local/tmp/lynx.hprof
-```
-
-Raw heap dumps are not published. The provided extracted paths and primitive
-fields contain only this minimal Explorer reproduction.
+Activity counts from `dumpsys meminfo` indicate accumulation but do not establish
+a leak on their own. [Heap verification](EVIDENCE.md) contains the retained paths,
+field values, measurement limits, and commands for collecting your own heap.
