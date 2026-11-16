@@ -1,0 +1,261 @@
+Shell Activities (all recorded): 5
+ACTIVITY 4017 ROOT {'id': '295263', 'name': 'java.lang.Class<q9.m>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "295263",
+    "class": "java.lang.Class<q9.m>",
+    "field": "q9.m.n",
+    "to": "8391",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8391",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8393",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8393",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8398",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8398",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "8414",
+    "to_class": "q9.m$g"
+  },
+  {
+    "from": "8414",
+    "class": "q9.m$g",
+    "field": "q9.m$g.a",
+    "to": "4436",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "4436",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "4835",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "4835",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "4017",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 8990 ROOT {'id': '295263', 'name': 'java.lang.Class<q9.m>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "295263",
+    "class": "java.lang.Class<q9.m>",
+    "field": "q9.m.n",
+    "to": "8391",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8391",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8393",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8393",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8397",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8397",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "10814",
+    "to_class": "q9.m$g"
+  },
+  {
+    "from": "10814",
+    "class": "q9.m$g",
+    "field": "q9.m$g.a",
+    "to": "9221",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "9221",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "9399",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "9399",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "8990",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 11031 ROOT {'id': '295263', 'name': 'java.lang.Class<q9.m>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "295263",
+    "class": "java.lang.Class<q9.m>",
+    "field": "q9.m.n",
+    "to": "8391",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8391",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8393",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8393",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8399",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8399",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "12841",
+    "to_class": "q9.m$g"
+  },
+  {
+    "from": "12841",
+    "class": "q9.m$g",
+    "field": "q9.m$g.a",
+    "to": "11262",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "11262",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "11450",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "11450",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "11031",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 13105 ROOT {'id': '295263', 'name': 'java.lang.Class<q9.m>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "295263",
+    "class": "java.lang.Class<q9.m>",
+    "field": "q9.m.n",
+    "to": "8391",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8391",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8393",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8393",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8395",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8395",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "14761",
+    "to_class": "q9.m$g"
+  },
+  {
+    "from": "14761",
+    "class": "q9.m$g",
+    "field": "q9.m$g.a",
+    "to": "13341",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "13341",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "13516",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "13516",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "13105",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 15101 ROOT {'id': '295263', 'name': 'java.lang.Class<q9.m>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "295263",
+    "class": "java.lang.Class<q9.m>",
+    "field": "q9.m.n",
+    "to": "8391",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8391",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8393",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8393",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8396",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8396",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "17373",
+    "to_class": "q9.m$g"
+  },
+  {
+    "from": "17373",
+    "class": "q9.m$g",
+    "field": "q9.m$g.a",
+    "to": "15329",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "15329",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "15503",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "15503",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "15101",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]

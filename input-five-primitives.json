@@ -1,0 +1,112 @@
+[
+  {
+    "object": "0x14032458",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x1406c2a0",
+    "class": "q9.m",
+    "fields": {
+      "q9.m.d": 0
+    }
+  },
+  {
+    "object": "0x1406c5e8",
+    "class": "q9.m$g",
+    "fields": {
+      "q9.m$g.a": 335771968
+    }
+  },
+  {
+    "object": "0x14074318",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x14089b50",
+    "class": "q9.m",
+    "fields": {
+      "q9.m.d": 0
+    }
+  },
+  {
+    "object": "0x14089e68",
+    "class": "q9.m$g",
+    "fields": {
+      "q9.m$g.a": 336032032
+    }
+  },
+  {
+    "object": "0x1408d490",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x140a3700",
+    "class": "q9.m",
+    "fields": {
+      "q9.m.d": 0
+    }
+  },
+  {
+    "object": "0x140a3a18",
+    "class": "q9.m$g",
+    "fields": {
+      "q9.m$g.a": 336134952
+    }
+  },
+  {
+    "object": "0x140ac9d8",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x140c01d0",
+    "class": "q9.m",
+    "fields": {
+      "q9.m.d": 0
+    }
+  },
+  {
+    "object": "0x140c04e8",
+    "class": "q9.m$g",
+    "fields": {
+      "q9.m$g.a": 336263240
+    }
+  },
+  {
+    "object": "0x140c4e68",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x140d9950",
+    "class": "q9.m",
+    "fields": {
+      "q9.m.d": 0
+    }
+  },
+  {
+    "object": "0x140d9c68",
+    "class": "q9.m$g",
+    "fields": {
+      "q9.m$g.a": 336362672
+    }
+  }
+]
