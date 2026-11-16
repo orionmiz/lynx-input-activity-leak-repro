@@ -1,0 +1,112 @@
+[
+  {
+    "object": "0x1402d6c8",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x14079ee0",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent.isStartedInUIThread": 0
+    }
+  },
+  {
+    "object": "0x1407a648",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView": 335755688
+    }
+  },
+  {
+    "object": "0x14087708",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x140acea8",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent.isStartedInUIThread": 0
+    }
+  },
+  {
+    "object": "0x140ad1c0",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView": 336119896
+    }
+  },
+  {
+    "object": "0x140b0840",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x140c5750",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent.isStartedInUIThread": 0
+    }
+  },
+  {
+    "object": "0x140c5a68",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView": 336291392
+    }
+  },
+  {
+    "object": "0x140cf2f0",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x140e4e88",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent.isStartedInUIThread": 0
+    }
+  },
+  {
+    "object": "0x140e51a0",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView": 336415528
+    }
+  },
+  {
+    "object": "0x140e8ba0",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x141021f0",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent.isStartedInUIThread": 0
+    }
+  },
+  {
+    "object": "0x14102508",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView": 336513784
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "native_libraries_identical": 32,
+  "changed_sdk_classes": [
+    "com/lynx/tasm/LynxView.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$KeyboardInsetsAnimationDispatcher$1.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$4.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$KeyboardInsetsAnimationDispatcher.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$KeyboardAvoidTarget.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$KeyboardAvoidingContext$1.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$KeyboardAvoidingContext.class",
+    "com/lynx/tasm/behavior/KeyboardEvent.class",
+    "com/lynx/tasm/behavior/KeyboardEvent$KeyboardAvoidingContext$2.class"
+  ],
+  "sha256": {
+    "explorer-baseline.apk": "d5bc0363f8b71b27d97131b3007f81cb2ecb9c13138a2aad021f198d423df815",
+    "explorer-fixed.apk": "4b484c7d67316aaee143abe1bb30cedb1e529275158d523d3f186aae488c56fe"
+  }
+}

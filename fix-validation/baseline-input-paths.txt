@@ -1,0 +1,268 @@
+Shell Activities (all recorded): 5
+ACTIVITY 3908 ROOT {'id': '8762', 'name': 'java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "8762",
+    "class": "java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent.sInsetsAnimationDispatchers",
+    "to": "8763",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8763",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8765",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8765",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8769",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8769",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "8783",
+    "to_class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher"
+  },
+  {
+    "from": "8783",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView",
+    "to": "4402",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "4402",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "4808",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "4808",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "3908",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 9726 ROOT {'id': '8762', 'name': 'java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "8762",
+    "class": "java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent.sInsetsAnimationDispatchers",
+    "to": "8763",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8763",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8765",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8765",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8767",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8767",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "11616",
+    "to_class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher"
+  },
+  {
+    "from": "11616",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView",
+    "to": "10013",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "10013",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "10246",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "10246",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "9726",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 11841 ROOT {'id': '8762', 'name': 'java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "8762",
+    "class": "java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent.sInsetsAnimationDispatchers",
+    "to": "8763",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8763",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8765",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8765",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8768",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8768",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.next",
+    "to": "13671",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "13671",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "13655",
+    "to_class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher"
+  },
+  {
+    "from": "13655",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView",
+    "to": "12127",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "12127",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "12386",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "12386",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "11841",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 13969 ROOT {'id': '8762', 'name': 'java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "8762",
+    "class": "java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent.sInsetsAnimationDispatchers",
+    "to": "8763",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8763",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8765",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8765",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8768",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8768",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "15847",
+    "to_class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher"
+  },
+  {
+    "from": "15847",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView",
+    "to": "14262",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "14262",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "14504",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "14504",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "13969",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]
+ACTIVITY 16101 ROOT {'id': '8762', 'name': 'java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>', 'root_type': '[NULL]', 'reachable': '0'}
+[
+  {
+    "from": "8762",
+    "class": "java.lang.Class<com.lynx.tasm.behavior.KeyboardEvent>",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent.sInsetsAnimationDispatchers",
+    "to": "8763",
+    "to_class": "java.util.WeakHashMap"
+  },
+  {
+    "from": "8763",
+    "class": "java.util.WeakHashMap",
+    "field": "java.util.WeakHashMap.table",
+    "to": "8765",
+    "to_class": "java.util.WeakHashMap$Entry[]"
+  },
+  {
+    "from": "8765",
+    "class": "java.util.WeakHashMap$Entry[]",
+    "field": "[NULL]",
+    "to": "8770",
+    "to_class": "java.util.WeakHashMap$Entry"
+  },
+  {
+    "from": "8770",
+    "class": "java.util.WeakHashMap$Entry",
+    "field": "java.util.WeakHashMap$Entry.value",
+    "to": "18578",
+    "to_class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher"
+  },
+  {
+    "from": "18578",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher",
+    "field": "com.lynx.tasm.behavior.KeyboardEvent$KeyboardInsetsAnimationDispatcher.mHostView",
+    "to": "16385",
+    "to_class": "com.android.internal.policy.DecorView"
+  },
+  {
+    "from": "16385",
+    "class": "com.android.internal.policy.DecorView",
+    "field": "com.android.internal.policy.DecorView.mContentRoot",
+    "to": "16580",
+    "to_class": "android.widget.LinearLayout"
+  },
+  {
+    "from": "16580",
+    "class": "android.widget.LinearLayout",
+    "field": "android.view.View.mContext",
+    "to": "16101",
+    "to_class": "com.lynx.explorer.LynxViewShellActivity"
+  }
+]

@@ -67,3 +67,5 @@ the coordinates and rerun.
 Activity counts from `dumpsys meminfo` indicate accumulation but do not establish
 a leak on their own. [Heap verification](EVIDENCE.md) contains the retained paths,
 field values, measurement limits, and commands for collecting your own heap.
+
+[Fix validation](EVIDENCE.md#fix-validation) compares the same reproduction before and after the cleanup patch.

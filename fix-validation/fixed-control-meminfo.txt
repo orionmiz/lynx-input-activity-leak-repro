@@ -1,0 +1,20 @@
+cycle=1 pid=4031
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        8           Activities:        1
+    Death Recipients:        0             WebViews:        0
+cycle=2 pid=4031
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+    Death Recipients:        0             WebViews:        0
+cycle=3 pid=4031
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+    Death Recipients:        0             WebViews:        0
+cycle=4 pid=4031
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+    Death Recipients:        0             WebViews:        0
+cycle=5 pid=4031
+               Views:       18         ViewRootImpl:        1
+         AppContexts:        5           Activities:        1
+    Death Recipients:        0             WebViews:        0

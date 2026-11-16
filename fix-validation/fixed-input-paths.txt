@@ -1,0 +1,4 @@
+Shell Activities (all recorded): 1
+ACTIVITY 10660 ROOT {'id': '10660', 'name': 'com.lynx.explorer.LynxViewShellActivity', 'root_type': '[NULL]', 'reachable': '0'}
+[]
+NO STRONG PATH FOUND

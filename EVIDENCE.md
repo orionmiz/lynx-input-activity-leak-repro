@@ -44,6 +44,48 @@ capture. Counts here include all recorded instances and use explicit static-fiel
 edges, DEX verification, GC logs, and independent HPROF primitive fields rather
 than filtering on `reachable`.
 
+## Fix validation
+
+Removing the start-state guards in `LynxView.destroy()` and `KeyboardEvent.stop()`
+stops dispatcher accumulation in the same five-cycle script. See the
+[patch](fix-validation/fix.patch).
+
+| Scenario | Activities after each close: baseline → patched | Heap dispatchers: baseline → patched |
+| --- | --- | --- |
+| Input never focused | 1, 2, 3, 4, 5 → 1, 1, 1, 1, 1 | 5 → 0 |
+| No input | 1, 1, 1, 1, 1 → 1, 1, 1, 1, 1 | 0 → 0 |
+| Input focused before closing | 1, 2, 2, 2, 2 → 1, 2, 2, 2, 2 | 0 → 0 |
+
+This comparison uses **two source-rebuilt Explorer APKs**, separate from the
+official APK reproduction above. Both use Explorer 4.1.0 sources
+(`b7eb5a809c0526bcfdca8c629848e01475f70ad9`) and Maven SDK 4.1.0.
+For each variant, `LynxView.java` and `KeyboardEvent.java` were compiled from
+source and substituted into the SDK AAR. The patched variant applies only the
+two-guard change; the remaining SDK classes and resources are preserved.
+All 32 packaged native libraries are byte-identical between the APKs.
+
+Build settings: AGP 8.8.2, Gradle 8.12.1, Kotlin 2.1.10, compile SDK 35,
+target SDK 32, ARM64, non-debuggable release, minification disabled, same signing
+key. Both ran on Android 15 userdebug `AP31.240517.022/11948202`, using the same
+pages and `reproduce.py` commands. Each scenario resets the process once, then
+keeps it alive for five cycles. All six runs recorded five destroy calls and no
+fatal or keyboard-cleanup exceptions; every focused cycle passed the keyboard-open
+assertion.
+
+[Extracted results and APK hashes](fix-validation) include per-cycle counts,
+heap counts, static paths, and HPROF primitive fields. The
+[baseline paths](fix-validation/baseline-input-paths.txt) retain all five destroyed
+Activities through the dispatcher map. The
+[patched paths](fix-validation/fixed-input-paths.txt) show no path from that map
+to the one remaining Activity, and the heap contains no dispatcher instances.
+
+The remaining Activity count is stable and matches the no-input control.
+Its presence in a snapshot does not establish a separate leak: the reference
+keeping that object present has not been identified. These results confirm
+removal of this accumulating static-map path, not collection of every Activity
+object. Other Android versions and multiple LynxViews sharing one host were not
+tested.
+
 ## Collect your own heap
 
 Requires a userdebug/root-capable emulator (or a host build that permits heap

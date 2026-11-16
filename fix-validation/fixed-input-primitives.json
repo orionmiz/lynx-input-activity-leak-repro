@@ -1,0 +1,17 @@
+[
+  {
+    "object": "0x14123b40",
+    "class": "com.lynx.explorer.LynxViewShellActivity",
+    "fields": {
+      "android.app.Activity.mDestroyed": 1,
+      "android.app.Activity.mFinished": 1
+    }
+  },
+  {
+    "object": "0x1413cb78",
+    "class": "com.lynx.tasm.behavior.KeyboardEvent",
+    "fields": {
+      "com.lynx.tasm.behavior.KeyboardEvent.isStartedInUIThread": 0
+    }
+  }
+]
